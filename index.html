@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>dhiyazhar</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+
+        <style>
+
+            html, body {
+                background: #212121;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            @media only screen and (max-width: 480px) {
+                .main h1 {
+                    font-size: 8px;
+                }                
+            }
+
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                max-width: 100%;
+                padding: 20px;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            .main-text h1 {
+                color: #FFF;
+                text-align: center;
+                font-family: 'Lora', serif;
+                font-weight: 400;
+                font-size: 32px;
+                font-style: normal;
+                line-height: normal;
+                margin: 0;
+                padding: 0;
+                cursor: pointer;
+                transition: transform 0.8s ease;
+            }
+
+            .social-icons {
+                display: none;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin-top: 10px;
+                opacity: 0;
+                transition: opacity 0.8s ease;
+            }
+
+            .social-icons i {
+                font-size: 32px;
+                color: #FFF;
+                padding: 5px;
+                margin: 10px;
+            }
+
+            .main-text.clicked h1 {
+                transform: translateY(-10px);
+            }
+
+            .main-text.clicked + .social-icons {
+                display: flex;
+                opacity: 1;
+            }
+
+        </style>
+
+    </head> 
+
+
+    <body>  
+        
+        <div class="main">
+
+            <div class="main-text" onclick="toggleIcons()">
+                <h1>rage, rage, against the dying of the light.</h1>
+            </div>
+
+            <div class="social-icons">
+
+                <a href="https://github.com/dhiyazhar" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/dhiyazhar" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/dhiyazhar" target="_blank"><i class="fab fa-instagram"></i></a>
+    
+            </div>
+            
+        </div>   
+
+        <script>
+            function toggleIcons() {
+                var mainText = document.querySelector('.main-text');
+                mainText.classList.toggle('clicked');
+            }
+        </script>
+        
+    </body>
+
+</html>
